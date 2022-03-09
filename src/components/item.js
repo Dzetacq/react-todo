@@ -3,9 +3,9 @@ import Edit from './edit'
 
 const Item = (props) => {
     return (
-        <p>
+        <p className={props.checked? 'checked' : ''}>
             <Check checked={props.checked} onCheck={props.onCheck} id={props.id}/>
-            <Edit checked={props.checked} name={props.name} onEdit={props.onEdit} id={props.id} />
+            <Edit name={props.name} onEdit={props.onEdit} id={props.id} />
             <Remove onRemove={props.onRemove} id={props.id}/>
         </p>
     )

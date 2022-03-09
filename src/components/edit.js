@@ -5,7 +5,6 @@ class Edit extends Component {
         super();
         this.state = { 
             text: props.name, 
-            checked: props.checked,
             onEnter: props.onEdit,
             id: props.id
         };
@@ -31,11 +30,8 @@ class Edit extends Component {
     }
 
     render() {
-        var checkedStyle = { textDecoration: "line-through"}
-        var uncheckedStyle = {textDecoration: "none"}
         return (
-            <input style={this.state.checked? checkedStyle : uncheckedStyle}
-                className='form-control'
+            <input className='form-control'
                 value={this.state.text}
                 onChange={this.onChange}
                 onKeyDown={this.onKey}
