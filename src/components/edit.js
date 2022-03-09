@@ -31,7 +31,7 @@ class Edit extends Component {
 
     render() {
         return (
-            <input className='form-control'
+            <input className='form-control mr-2'
                 value={this.state.text}
                 onChange={this.onChange}
                 onKeyDown={this.onKey}

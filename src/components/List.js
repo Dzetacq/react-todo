@@ -76,7 +76,6 @@ class List extends Component {
 
     onToggle(e) {
         var bool = !this.state.data.every((item) => item.checked)
-        console.log("test", bool);
         var newData = this.state.data;
         newData.map((i) => {
             var newItem = i;
@@ -93,11 +92,12 @@ class List extends Component {
     render() {
         var toggled = this.state.data.every((item) => item.checked)
         return (
-            <div>
+            <form onSubmit={e => { e.preventDefault(); }}>
                 <Buttons onToggle={this.onToggle} toggled={toggled} onDelete={this.onDelete} />
                 <Add onAdd={this.onAdd}/>
+                <hr/>
                 <ListArray list={this.state.data} onCheck={this.onCheck} onRemove={this.onRemove} onEdit={this.onEdit} />
-            </div>
+            </form>
             
         )
     }

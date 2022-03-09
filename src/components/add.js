@@ -20,7 +20,7 @@ class Add extends Component {
 
     render() {
         return (
-            <div>
+            <div className='input-group my-3'>
                 <Button onClick={this.onClick}/>
                 <input className='form-control'
                     value={this.state.text}
@@ -34,7 +34,7 @@ class Add extends Component {
 
 const Button = (props) => {
     return (
-        <button onClick={props.onClick}>+</button>
+        <button className='btn btn-primary mr-2' onClick={props.onClick}>+</button>
     )
 }
 

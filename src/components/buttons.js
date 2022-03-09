@@ -2,7 +2,7 @@ import React from 'react';
 
 const Buttons = (props) => {
     return (
-        <div>
+        <div className='my-3'>
             <Toggle onToggle={props.onToggle} toggled={props.toggled} />
             <Delete onDelete={props.onDelete} />
         </div>
@@ -10,16 +10,15 @@ const Buttons = (props) => {
 }
 
 const Toggle = (props) => {
-    console.log(props.toggled);
     var text = props.toggled ? "Uncheck all" : "Complete all" ;
     return (
-        <button className='toggle' onClick={props.onToggle}>{text}</button>
+        <button className='toggle btn btn-primary mr-2' onClick={props.onToggle}>{text}</button>
     )
 }
 
 const Delete = (props) => {
     return (
-        <button className='delete-all' onClick={props.onDelete}>Delete all tasks</button>
+        <button className='delete-all btn btn-danger' onClick={props.onDelete}>Delete all tasks</button>
     )
 }
 
